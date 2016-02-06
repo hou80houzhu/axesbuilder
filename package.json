@@ -1,0 +1,33 @@
+{
+  "name" : "brooderBuilder",
+  "description" : "build the projects which run with the brooder fontend framework.",
+  "version" : "0.0.1",
+  "main" : "./brooderBuilder.js",
+  "author" : {
+    "name" : "hou80houzhu",
+    "email" : "hou80houzhu@vip.qq.com"
+  },
+  "keywords" : [ "brooder" ],
+  "licenses" : {
+    "type" : "none"
+  },
+  "bin": { "brooderBuilder": "bin/brooderBuilder.js" },
+  "repository" : {
+    "type" : "git",
+    "url" : ""
+  },
+  "bugs" : {
+    "url" : ""
+  },
+  "scripts" : {
+    "start" : "node bin\/brooderBuilder.js"
+  },
+  "license" : {
+    "type" : "gplv2"
+  },
+  "devDependencies":{
+      "uglifycss":"~0.0.18",
+      "html-minifier":"~1.0.0",
+      "uglify-js":"~2.5.0"
+  }
+}
