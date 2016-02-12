@@ -1,17 +1,17 @@
 #!/usr/bin/env node  
 var run = function (obj) {
-    if (obj[0] === '-v') {
+    if (obj[0] === 'version') {
         console.log('version is 0.0.1');
-    } else if (obj[0] === '-h') {
+    } else if (obj[0] === 'help') {
         console.log('Useage:');
-        console.log('  -v --version [show version]');
-        console.log('  -b --build [to build project]');
-    } else if (obj[0] === "-b") {
+        console.log('  version --version [show version]');
+        console.log('  build --build [to build project]');
+    } else if (obj[0] === "build") {
         require("../builder").build(obj[1]);
     } else {
         console.log('Useage:');
-        console.log('  -v --version [show version]');
-        console.log('  -b --build [to build project]');
+        console.log('  version --version [show version]');
+        console.log('  build --build [to build project]');
     }
 };
 run(process.argv.slice(2));
