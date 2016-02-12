@@ -1,4 +1,4 @@
-![brooderbuilder](https://github.com/hou80houzhu/brooderBuilder/raw/master/brooderbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/brooderBuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/brooderBuilder)
+![brooderbuilder](https://github.com/hou80houzhu/brooderBuilder/raw/master/brooderbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/brooderBuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/brooderBuilder) [![npm version](https://badge.fury.io/js/brooderbuilder.svg)](https://badge.fury.io/js/brooderbuilder)
 
 ### build the projects which run with the brooder web framework.
 
