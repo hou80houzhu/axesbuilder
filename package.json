@@ -1,7 +1,7 @@
 {
   "name" : "brooderbuilder",
   "description" : "build the projects which run with the brooder fontend framework.",
-  "version" : "0.0.3",
+  "version" : "0.0.4",
   "main" : "./brooderbuilder.js",
   "author" : {
     "name" : "hou80houzhu",
