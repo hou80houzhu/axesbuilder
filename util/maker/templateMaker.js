@@ -43,42 +43,45 @@ templatePacker.isNotep = /\<\!\-\-\[[0-9a-zA-Z-_]*?\]\-\-\>/;
 templatePacker.replaceHtmlPath = function (code) {
     var ths = this;
     return code.replace(/src=['"].+?['"]/g, function (a) {
-        var bb = a.substring(5, a.length - 1).split("?");
-
-        var b = bb[0];
-        var c = bb[1] ? "?" + bb[1] : "";
-        var suffix = b.split(".");
-        if (suffix.length > 1) {
-            suffix = suffix[suffix.length - 1];
-        } else {
-            suffix = "";
-        }
-
-        var k = b.split("/");
-        k.splice(k.length - 1, 1);
-        var t = k.join("/");
-        try {
-            var old = ths._base.basePath + b;
-            var data = fs.readFileSync(old);
-            var name = hash.md5(data);
-            var newpath = ths._base.newPath + t + "/" + name + "." + suffix;
-            createFile(newpath, function () {
-                fs.stat(old, function (err, st) {
-                    if (err) {
-                    } else if (st.isFile()) {
-                        readable = fs.createReadStream(old);
-                        writable = fs.createWriteStream(newpath);
-                        readable.pipe(writable);
-                    }
-                });
-            });
-            if (a.indexOf("'") !== -1) {
-                r = "src='" + t + "/" + name + "." + suffix + c + "'";
+        if (a.indexOf("<%") === -1) {
+            var bb = a.substring(5, a.length - 1).split("?");
+            var b = bb[0];
+            var c = bb[1] ? "?" + bb[1] : "";
+            var suffix = b.split(".");
+            if (suffix.length > 1) {
+                suffix = suffix[suffix.length - 1];
             } else {
-                r = "src=\"" + t + "/" + name + "." + suffix + c + "\"";
+                suffix = "";
             }
-            return r;
-        } catch (e) {
+
+            var k = b.split("/");
+            k.splice(k.length - 1, 1);
+            var t = k.join("/");
+            try {
+                var old = ths._base.basePath + b;
+                var data = fs.readFileSync(old);
+                var name = hash.md5(data);
+                var newpath = ths._base.newPath + t + "/" + name + "." + suffix;
+                createFile(newpath, function () {
+                    fs.stat(old, function (err, st) {
+                        if (err) {
+                        } else if (st.isFile()) {
+                            readable = fs.createReadStream(old);
+                            writable = fs.createWriteStream(newpath);
+                            readable.pipe(writable);
+                        }
+                    });
+                });
+                if (a.indexOf("'") !== -1) {
+                    r = "src='" + t + "/" + name + "." + suffix + c + "'";
+                } else {
+                    r = "src=\"" + t + "/" + name + "." + suffix + c + "\"";
+                }
+                return r;
+            } catch (e) {
+                return a;
+            }
+        } else {
             return a;
         }
     });
