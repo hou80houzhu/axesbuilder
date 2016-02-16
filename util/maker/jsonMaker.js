@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var brooder = require("../brooder");
+var packet = require("../packet");
 var file = require("../file");
 var jsonPacker = function (info, path, content) {
     this._base = info;
@@ -15,8 +15,8 @@ jsonPacker.prototype.minify = function () {
 var jsonMaker = function (option) {
     console.log("-->[json] start build json files...");
     var files = option.source.json;
-    var queue = brooder.queue();
-    var ps = brooder.promise();
+    var queue = packet.queue();
+    var ps = packet.promise();
     queue.complete(function () {
         ps.resolve();
     });

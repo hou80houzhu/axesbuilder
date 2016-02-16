@@ -166,7 +166,7 @@ queue.prototype.add = function (fn, error, parameter) {
             error: error || null
         });
     } else {
-        throw Error("[brooder]-this queue can not add task when it is not in state of init.");
+        throw Error("[packet]-this queue can not add task when it is not in state of init.");
     }
     return this;
 };

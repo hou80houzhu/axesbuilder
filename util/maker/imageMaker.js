@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var brooder = require("../brooder");
+var packet = require("../packet");
 var file = require("../file");
 function createFile(dirpath, fn) {
     if (!fs.existsSync(dirpath)) {
@@ -45,8 +45,8 @@ imagePacker.prototype.minify = function () {
 var imageMaker = function (option) {
     console.log("-->[image] start build images files...");
     var files = option.source.image;
-    var queue = brooder.queue();
-    var ps = brooder.promise();
+    var queue = packet.queue();
+    var ps = packet.promise();
     queue.complete(function () {
         ps.resolve();
     });

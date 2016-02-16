@@ -1,5 +1,5 @@
 var fs = require("fs");
-var brooder = require("./brooder");
+var packet = require("./packet");
 var file = function (path) {
     this.path = path;
 };
@@ -8,8 +8,8 @@ file.prototype.read = function (option) {
         encoding: "utf8",
         flag: 'r'
     };
-    brooder.extend(ops, option);
-    var ps = brooder.promise();
+    packet.extend(ops, option);
+    var ps = packet.promise();
     fs.readFile(this.path, ops, function (err, data) {
         if (err) {
             ps.reject(err);
@@ -39,7 +39,7 @@ file.prototype.scan = function (fn) {
     walk(path, fileList, folderList);
 };
 file.prototype.write = function (content) {
-    var ps = brooder.promise();
+    var ps = packet.promise();
     var dirpath = this.path;
     if (!fs.existsSync(dirpath)) {
         var pathtmp = "";
@@ -63,7 +63,7 @@ file.prototype.write = function (content) {
     return ps;
 };
 file.prototype.getAllSubFilesPath = function () {
-    var ps = brooder.promise();
+    var ps = packet.promise();
     var path = this.path;
     var fileList = [];
     var walk = function (path, fileList) {
@@ -82,7 +82,7 @@ file.prototype.getAllSubFilesPath = function () {
     return ps;
 };
 file.prototype.getSubFilesPath = function () {
-    var tmpPath = this.path, ps = brooder.promise(), r = [];
+    var tmpPath = this.path, ps = packet.promise(), r = [];
     var stats = fs.statSync(tmpPath);
     if (stats.isDirectory()) {
         files = fs.readdirSync(path);
@@ -99,7 +99,7 @@ file.prototype.getSubFilesPath = function () {
     return ps;
 };
 file.prototype.getSubFilesPathWithSuffix = function (suffix) {
-    var tmpPath = this.path, ps = brooder.promise(), r = [];
+    var tmpPath = this.path, ps = packet.promise(), r = [];
     var stats = fs.statSync(tmpPath);
     if (stats.isDirectory()) {
         files = fs.readdirSync(tmpPath);

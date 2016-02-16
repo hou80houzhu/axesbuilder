@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var brooder = require("../brooder");
+var packet = require("../packet");
 var minify = require('html-minifier').minify;
 var file = require("../file");
 
@@ -96,8 +96,8 @@ htmlPacker.minify = function () {
 var htmlMaker = function (option) {
     console.log("-->[html] start build html files...");
     var files = option.source.html;
-    var queue = brooder.queue();
-    var ps = brooder.promise();
+    var queue = packet.queue();
+    var ps = packet.promise();
     queue.complete(function () {
         ps.resolve();
     });

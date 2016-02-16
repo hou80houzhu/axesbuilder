@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var brooder = require("../brooder");
+var packet = require("../packet");
 var file = require("../file");
 function createFile(dirpath, fn) {
     if (!fs.existsSync(dirpath)) {
@@ -44,9 +44,9 @@ otherPacker.prototype.minify = function () {
 };
 var otherMaker = function (option) {
     console.log("-->[other] start build other files...");
-    var queue = brooder.queue();
+    var queue = packet.queue();
     var files = option.source.other;
-    var ps = brooder.promise();
+    var ps = packet.promise();
     queue.complete(function () {
         ps.resolve();
     });

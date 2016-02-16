@@ -1,7 +1,7 @@
 #!/usr/bin/env node  
 var run = function (obj) {
     if (obj[0] === 'version') {
-        console.log('version is 0.0.1');
+        console.log('version is 0.0.4');
     } else if (obj[0] === 'help') {
         console.log('Useage:');
         console.log('  version --version [show version]');

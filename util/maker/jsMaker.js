@@ -1,7 +1,7 @@
 var fs = require("fs");
 var hash = require("../md5");
 var uglify = require("uglify-js");
-var brooder = require("../brooder");
+var packet = require("../packet");
 var file = require("../file");
 var jsPacker = function (info, path, content) {
     this._base = info;
@@ -19,8 +19,8 @@ jsPacker.prototype.minify = function () {
 var jsMaker = function (option) {
     console.log("-->[js] start build js files...");
     var files = option.source.js;
-    var queue = brooder.queue();
-    var ps = brooder.promise();
+    var queue = packet.queue();
+    var ps = packet.promise();
     queue.complete(function () {
         ps.resolve();
     });

@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var brooder = require("../brooder");
+var packet = require("../packet");
 var file = require("../file");
 
 function createFile(dirpath, fn) {
@@ -106,8 +106,8 @@ templatePacker.prototype.getCompressStr = function () {
 var templateMaker = function (option) {
     console.log("-->[template] start build template files...");
     var files = option.source.template;
-    var queue = brooder.queue();
-    var ps = brooder.promise();
+    var queue = packet.queue();
+    var ps = packet.promise();
     queue.complete(function () {
         ps.resolve();
     });

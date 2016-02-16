@@ -1,31 +1,31 @@
 {
-  "name" : "brooderbuilder",
-  "description" : "build the projects which run with the brooder fontend framework.",
+  "name" : "packetbuilder",
+  "description" : "build the projects which run with the packet fontend framework.",
   "version" : "0.0.4",
-  "main" : "./brooderbuilder.js",
+  "main" : "./packetbuilder.js",
   "author" : {
     "name" : "hou80houzhu",
     "email" : "hou80houzhu@vip.qq.com"
   },
-  "keywords" : ["brooder","brooderjs"],
+  "keywords" : ["packetjs","packet","build"],
   "licenses" : {
     "type" : "none"
   },
-  "bin": { "brooderbuilder": "bin/brooderbuilder.js" },
+  "bin": { "packetbuilder": "bin/packetbuilder.js" },
   "repository" : {
     "type" : "git",
-    "url" : "https://github.com/hou80houzhu/brooderbuilder"
+    "url" : "https://github.com/hou80houzhu/packetbuilder"
   },
   "scripts" : {
-    "start" : "node bin\/brooderBuilder.js"
+    "start" : "node bin\/packetBuilder.js"
   },
   "license" : {
     "type" : "MIT"
   },
   "bugs": {
-    "url": "https://github.com/hou80houzhu/brooderbuilder/issues"
+    "url": "https://github.com/hou80houzhu/packetbuilder/issues"
   },
-  "homepage": "https://github.com/hou80houzhu/brooderbuilder#readme",
+  "homepage": "https://github.com/hou80houzhu/packetbuilder#readme",
   "devDependencies":{
       "uglifycss":"~0.0.18",
       "html-minifier":"~1.0.0",

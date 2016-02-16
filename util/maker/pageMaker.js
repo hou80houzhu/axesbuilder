@@ -1,10 +1,10 @@
-var brooder = require("../brooder");
+var packet = require("../packet");
 var file = require("../file");
 var pageMaker = function (option) {
     console.log("-->[page] start change pages...");
     var files = option.changePages;
-    var queue = brooder.queue();
-    var ps = brooder.promise();
+    var queue = packet.queue();
+    var ps = packet.promise();
     queue.complete(function () {
         console.log("-->[page] change pages end");
         ps.resolve();
@@ -29,7 +29,7 @@ var pageMaker = function (option) {
                             m.sourceMapping = option.sourceMapping;
                             editable = true;
                             return "$.App(" + JSON.stringify(m) + ")";
-                        }).replace(/\brooder\.App\(\{[\w\W]*?\}\)/g, function (a) {
+                        }).replace(/\packet\.App\(\{[\w\W]*?\}\)/g, function (a) {
                             var q = a.substring(6, a.length - 1);
                             var m = new Function("return " + q + ";")();
                             if (!m || m === "") {
@@ -40,7 +40,7 @@ var pageMaker = function (option) {
                             m.debug = false;
                             m.sourceMapping = option.sourceMapping;
                             editable = true;
-                            return "brooder.App(" + JSON.stringify(m) + ")";
+                            return "packet.App(" + JSON.stringify(m) + ")";
                         });
                     }
                     var t = b;
