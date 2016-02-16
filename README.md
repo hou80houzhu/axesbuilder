@@ -1,4 +1,4 @@
-![packetbuilder](https://github.com/hou80houzhu/packetBuilder/raw/master/packetbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/packetbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/packetbuilder)
+![packetbuilder](https://github.com/hou80houzhu/packetbuilder/raw/master/packetbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/packetbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/packetbuilder)
 
 [![NPM](https://nodei.co/npm/packetbuilder.png?downloads=true)](https://nodei.co/npm/packetbuilder/)
 
