@@ -1,18 +1,18 @@
-![brooderbuilder](https://github.com/hou80houzhu/brooderBuilder/raw/master/brooderbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/brooderbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/brooderbuilder)
+![packetbuilder](https://github.com/hou80houzhu/packetBuilder/raw/master/packetbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/packetbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/packetbuilder)
 
-[![NPM](https://nodei.co/npm/brooderbuilder.png?downloads=true)](https://nodei.co/npm/brooderbuilder/)
+[![NPM](https://nodei.co/npm/packetbuilder.png?downloads=true)](https://nodei.co/npm/packetbuilder/)
 
-build the projects which run with the brooder web framework.
+build the projects which run with the PacketJS web framework.
 
-##What is brooderbuilder
+##What is packetbuilder
 
-brooderbuilder for building frontend program for frontend resources combined compression and version tracking
+packetbuilder for building frontend program for frontend resources combined compression and version tracking
 
 ##How to use
 
-**Step 1:**  install brooderbuilder
+**Step 1:**  install packetbuilder
 
-`npm install brooderbuilder -g`
+`npm install packetbuilder -g`
 
 **Step 2:**
 
@@ -22,7 +22,7 @@ put `build.json` file under the packets folder of a project.
 
 run the command to build 
 
-`brooderbuilder build projectpacketpath`
+`packetbuilder build projectpacketpath`
 
 ##build.json
 
