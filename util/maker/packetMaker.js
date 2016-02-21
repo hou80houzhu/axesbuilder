@@ -1,6 +1,6 @@
 var uglify = require("uglify-js");
 var hash = require("../md5");
-var packet = require("../packet");
+var axes = require("../axes");
 var file = require("../file");
 var pather = require("../path");
 var packetInfo = function () {
@@ -228,8 +228,8 @@ var minite = function (option, key, keyy, keyyy) {
 var packetMaker = function (option) {
     console.log("-->[code] start build code files...");
     var files = option.mapping.js;
-    var queue = packet.queue();
-    var ps = packet.promise();
+    var queue = axes.queue();
+    var ps = axes.promise();
     queue.complete(function () {
         minite(option, "js", "code", "js");
         minite(option, "css", "css", "ocss");

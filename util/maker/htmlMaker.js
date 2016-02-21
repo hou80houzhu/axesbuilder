@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var packet = require("../packet");
+var axes = require("../axes");
 var minify = require('html-minifier').minify;
 var file = require("../file");
 
@@ -96,8 +96,8 @@ htmlPacker.minify = function () {
 var htmlMaker = function (option) {
     console.log("-->[html] start build html files...");
     var files = option.source.html;
-    var queue = packet.queue();
-    var ps = packet.promise();
+    var queue = axes.queue();
+    var ps = axes.promise();
     queue.complete(function () {
         ps.resolve();
     });

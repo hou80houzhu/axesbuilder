@@ -1,31 +1,31 @@
 {
-  "name" : "packetbuilder",
-  "description" : "build the projects which run with the packet fontend framework.",
+  "name" : "axesbuilder",
+  "description" : "build the projects which develop by the AxesJS web framework.",
   "version" : "0.0.4",
-  "main" : "./packetbuilder.js",
+  "main" : "./axesbuilder.js",
   "author" : {
     "name" : "hou80houzhu",
     "email" : "hou80houzhu@vip.qq.com"
   },
-  "keywords" : ["packetjs","packet","build"],
+  "keywords" : ["axesjs","axes","build"],
   "licenses" : {
     "type" : "none"
   },
-  "bin": { "packetbuilder": "bin/packetbuilder.js" },
+  "bin": { "axesbuilder": "bin/axesbuilder.js" },
   "repository" : {
     "type" : "git",
-    "url" : "https://github.com/hou80houzhu/packetbuilder"
+    "url" : "https://github.com/hou80houzhu/axesbuilder"
   },
   "scripts" : {
-    "start" : "node bin\/packetBuilder.js"
+    "start" : "node bin\/axesbuilder.js"
   },
   "license" : {
     "type" : "MIT"
   },
   "bugs": {
-    "url": "https://github.com/hou80houzhu/packetbuilder/issues"
+    "url": "https://github.com/hou80houzhu/axesbuilder/issues"
   },
-  "homepage": "https://github.com/hou80houzhu/packetbuilder#readme",
+  "homepage": "https://github.com/hou80houzhu/axesbuilder#readme",
   "devDependencies":{
       "uglifycss":"~0.0.18",
       "html-minifier":"~1.0.0",

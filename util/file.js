@@ -1,5 +1,5 @@
 var fs = require("fs");
-var packet = require("./packet");
+var packet = require("./axes");
 var file = function (path) {
     this.path = path;
 };

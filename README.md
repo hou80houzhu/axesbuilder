@@ -1,18 +1,18 @@
-![packetbuilder](https://github.com/hou80houzhu/packetbuilder/raw/master/packetbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/packetbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/packetbuilder)
+![axesbuilder](https://github.com/hou80houzhu/axesbuilder/raw/master/axesbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/axesbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/axesbuilder)
 
-[![NPM](https://nodei.co/npm/packetbuilder.png?downloads=true)](https://nodei.co/npm/packetbuilder/)
+[![NPM](https://nodei.co/npm/axesbuilder.png?downloads=true)](https://nodei.co/npm/axesbuilder/)
 
-build the projects which run with the PacketJS web framework.
+build the projects which run with the AxesJS web framework.
 
-##What is packetbuilder
+##What is axesbuilder
 
-packetbuilder for building frontend program for frontend resources combined compression and version tracking
+axesbuilder for building frontend program for frontend resources combined compression and version tracking
 
 ##How to use
 
-**Step 1:**  install packetbuilder
+**Step 1:**  install axesbuilder
 
-`npm install packetbuilder -g`
+`npm install axesbuilder -g`
 
 **Step 2:**
 
@@ -22,7 +22,7 @@ put `build.json` file under the packets folder of a project.
 
 run the command to build 
 
-`packetbuilder build projectpacketpath`
+`axesbuilder build projectpacketpath`
 
 ##build.json
 

@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var packet = require("../packet");
+var axes = require("../axes");
 var uglifycss = require('uglifycss');
 var file = require("../file");
 function createFile(dirpath, fn) {
@@ -105,8 +105,8 @@ var cssMaker = function (option, iscompress) {
     if (!iscompress) {
         files = option.source.ocss;
     }
-    var queue = packet.queue();
-    var ps = packet.promise();
+    var queue = axes.queue();
+    var ps = axes.promise();
     queue.complete(function () {
         ps.resolve();
     });
