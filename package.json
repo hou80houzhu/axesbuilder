@@ -1,7 +1,7 @@
 {
   "name" : "axesbuilder",
   "description" : "build the projects which develop by the AxesJS web framework.",
-  "version" : "0.0.4",
+  "version" : "0.0.5",
   "main" : "./axesbuilder.js",
   "author" : {
     "name" : "hou80houzhu",
@@ -26,9 +26,10 @@
     "url": "https://github.com/hou80houzhu/axesbuilder/issues"
   },
   "homepage": "https://github.com/hou80houzhu/axesbuilder#readme",
-  "devDependencies":{
+  "dependencies":{
       "uglifycss":"~0.0.18",
       "html-minifier":"~1.0.0",
       "uglify-js":"~2.5.0"
-  }
+  },
+  "devDependencies": {}
 }
