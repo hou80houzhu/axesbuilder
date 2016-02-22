@@ -1,16 +1,16 @@
-![axesbuilder](https://github.com/hou80houzhu/axesbuilder/raw/master/axesbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/axesbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/axesbuilder)
+![AxesBuilder](https://github.com/hou80houzhu/axesbuilder/raw/master/axesbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/axesbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/axesbuilder)
 
 [![NPM](https://nodei.co/npm/axesbuilder.png?downloads=true)](https://nodei.co/npm/axesbuilder/)
 
 build the projects which run with the AxesJS web framework.
 
-##What is axesbuilder
+##What is AxesBuilder
 
-axesbuilder for building frontend program for frontend resources combined compression and version tracking
+AxesBuilder for building frontend program for frontend resources combined compression and version tracking
 
 ##How to use
 
-**Step 1:**  install axesbuilder
+**Step 1:**  install AxesBuilder
 
 `npm install axesbuilder -g`
 
