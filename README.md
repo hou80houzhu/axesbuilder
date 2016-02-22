@@ -1,6 +1,6 @@
 ![AxesBuilder](https://github.com/hou80houzhu/axesbuilder/raw/master/axesbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/axesbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/axesbuilder)
 
-[![NPM](https://nodei.co/npm/axesbuilder.png?downloads=true)](https://nodei.co/npm/axesbuilder/)
+[![NPM](https://nodei.co/npm/axesbuilder.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/axesbuilder/)
 
 build the projects which run with the AxesJS web framework.
 
