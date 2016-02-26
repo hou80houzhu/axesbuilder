@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var axes = require("../axes");
+var bright = require("../bright");
 var file = require("../file");
 var jsonPacker = function (info, path, content) {
     this._base = info;
@@ -15,8 +15,8 @@ jsonPacker.prototype.minify = function () {
 var jsonMaker = function (option) {
     console.log("-->[json] start build json files...");
     var files = option.source.json;
-    var queue = axes.queue();
-    var ps = axes.promise();
+    var queue = bright.queue();
+    var ps = bright.promise();
     queue.complete(function () {
         ps.resolve();
     });

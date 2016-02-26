@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var axes = require("../axes");
+var bright = require("../bright");
 var file = require("../file");
 
 function createFile(dirpath, fn) {
@@ -106,8 +106,8 @@ templatePacker.prototype.getCompressStr = function () {
 var templateMaker = function (option) {
     console.log("-->[template] start build template files...");
     var files = option.source.template;
-    var queue = axes.queue();
-    var ps = axes.promise();
+    var queue = bright.queue();
+    var ps = bright.promise();
     queue.complete(function () {
         ps.resolve();
     });

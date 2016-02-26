@@ -1,18 +1,18 @@
-![AxesBuilder](https://github.com/hou80houzhu/axesbuilder/raw/master/axesbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/axesbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/axesbuilder)
+![BrightBuilder](https://github.com/hou80houzhu/brightbuilder/raw/master/brightbuilder.png) [![Build Status](https://travis-ci.org/hou80houzhu/brightbuilder.svg?branch=master)](https://travis-ci.org/hou80houzhu/brightbuilder)
 
-[![NPM](https://nodei.co/npm/axesbuilder.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/axesbuilder/)
+[![NPM](https://nodei.co/npm/brightbuilder.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/brightbuilder/)
 
-build the projects which run with the AxesJS web framework.
+build the projects which run with the BrightJS web framework.
 
-##What is AxesBuilder
+##What is BrightBuilder
 
-AxesBuilder for building frontend program for frontend resources combined compression and version tracking
+BrightBuilder for building frontend program for frontend resources combined compression and version tracking
 
 ##How to use
 
-**Step 1:**  install AxesBuilder
+**Step 1:**  install BrightBuilder
 
-`npm install axesbuilder -g`
+`npm install brightbuilder -g`
 
 **Step 2:**
 
@@ -22,7 +22,7 @@ put `build.json` file under the packets folder of a project.
 
 run the command to build 
 
-`axesbuilder build projectpacketpath`
+`brightbuilder build projectpacketpath`
 
 ##build.json
 

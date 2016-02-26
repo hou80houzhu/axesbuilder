@@ -1,7 +1,7 @@
 var fs = require("fs");
 var hash = require("../md5");
 var uglify = require("uglify-js");
-var axes = require("../axes");
+var bright = require("../bright");
 var file = require("../file");
 var jsPacker = function (info, path, content) {
     this._base = info;
@@ -19,8 +19,8 @@ jsPacker.prototype.minify = function () {
 var jsMaker = function (option) {
     console.log("-->[js] start build js files...");
     var files = option.source.js;
-    var queue = axes.queue();
-    var ps = axes.promise();
+    var queue = bright.queue();
+    var ps = bright.promise();
     queue.complete(function () {
         ps.resolve();
     });

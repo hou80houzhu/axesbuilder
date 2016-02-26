@@ -1,31 +1,31 @@
 {
-  "name" : "axesbuilder",
-  "description" : "build the projects which develop by the AxesJS web framework.",
+  "name" : "brightbuilder",
+  "description" : "build the projects which develop by the BrightJS web framework.",
   "version" : "0.0.5",
-  "main" : "./axesbuilder.js",
+  "main" : "./brightbuilder.js",
   "author" : {
     "name" : "hou80houzhu",
     "email" : "hou80houzhu@vip.qq.com"
   },
-  "keywords" : ["axesjs","axes","build"],
+  "keywords" : ["brightjs","bright","build"],
   "licenses" : {
     "type" : "none"
   },
-  "bin": { "axesbuilder": "bin/axesbuilder.js" },
+  "bin": { "brightbuilder": "bin/brightbuilder.js" },
   "repository" : {
     "type" : "git",
-    "url" : "https://github.com/hou80houzhu/axesbuilder"
+    "url" : "https://github.com/hou80houzhu/brightbuilder"
   },
   "scripts" : {
-    "start" : "node bin\/axesbuilder.js"
+    "start" : "node bin\/brightbuilder.js"
   },
   "license" : {
     "type" : "MIT"
   },
   "bugs": {
-    "url": "https://github.com/hou80houzhu/axesbuilder/issues"
+    "url": "https://github.com/hou80houzhu/brightbuilder/issues"
   },
-  "homepage": "https://github.com/hou80houzhu/axesbuilder#readme",
+  "homepage": "https://github.com/hou80houzhu/brightbuilder#readme",
   "dependencies":{
       "uglifycss":"~0.0.18",
       "html-minifier":"~1.0.0",

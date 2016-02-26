@@ -1,6 +1,6 @@
 var file = require("./util/file");
 var pather = require("./util/path");
-var axes = require("./util/axes");
+var bright = require("./util/bright");
 var packetMaker = require("./util/maker/packetMaker");
 var cssMaker = require("./util/maker/cssMaker");
 var templateMaker = require("./util/maker/templateMaker");
@@ -85,7 +85,7 @@ var getConfigInfo = function (path, fn) {
     });
 };
 var buildCode = function (configPath, info) {
-    var build = parseInt(info.build) + 1, ps = axes.promise();
+    var build = parseInt(info.build) + 1, ps = bright.promise();
     if ((build + "").length < 6) {
         var t = "";
         for (var i = 0; i < 6 - (build + "").length; i++) {
@@ -131,9 +131,9 @@ var run = function (option) {
         }
         option.mapping = mapping;
         packetMaker(option).done(function () {
-            var queue = axes.queue();
+            var queue = bright.queue();
             queue.complete(function () {
-                file(option.newPath + "source.js").write("axes.source(" + JSON.stringify({
+                file(option.newPath + "source.js").write("bright.source(" + JSON.stringify({
                     code: option.codeCompress,
                     template: option.templateCompress,
                     css: option.cssCompress

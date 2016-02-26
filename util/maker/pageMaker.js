@@ -1,10 +1,10 @@
-var axes = require("../axes");
+var bright = require("../bright");
 var file = require("../file");
 var pageMaker = function (option) {
     console.log("-->[page] start change pages...");
     var files = option.changePages;
-    var queue = axes.queue();
-    var ps = axes.promise();
+    var queue = bright.queue();
+    var ps = bright.promise();
     queue.complete(function () {
         console.log("-->[page] change pages end");
         ps.resolve();

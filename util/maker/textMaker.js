@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var axes = require("../axes");
+var bright = require("../bright");
 var file = require("../file");
 var textPacker = function (info, path, content) {
     this._base = info;
@@ -15,8 +15,8 @@ textPacker.prototype.minify = function () {
 var textMaker = function (option) {
     console.log("-->[text] start build text files...");
     var files = option.source.text;
-    var queue = axes.queue();
-    var ps = axes.promise();
+    var queue = bright.queue();
+    var ps = bright.promise();
     queue.complete(function () {
         ps.resolve();
     });

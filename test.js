@@ -1,1 +1,1 @@
-require("./builder").build("G:\\brooder\\axesjs\\packet");
+require("./builder").build("G:\\brooder\\brightjs\\packet");

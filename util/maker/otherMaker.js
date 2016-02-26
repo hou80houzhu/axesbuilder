@@ -1,6 +1,6 @@
 var fs = require("fs");
 var hash = require("../md5");
-var axes = require("../axes");
+var bright = require("../bright");
 var file = require("../file");
 function createFile(dirpath, fn) {
     if (!fs.existsSync(dirpath)) {
@@ -44,9 +44,9 @@ otherPacker.prototype.minify = function () {
 };
 var otherMaker = function (option) {
     console.log("-->[other] start build other files...");
-    var queue = axes.queue();
+    var queue = bright.queue();
     var files = option.source.other;
-    var ps = axes.promise();
+    var ps = bright.promise();
     queue.complete(function () {
         ps.resolve();
     });
