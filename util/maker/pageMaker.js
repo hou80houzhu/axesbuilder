@@ -24,7 +24,7 @@ var pageMaker = function (option) {
                             }
                             m.basePath = option.pathPrefix + option.build + "/";
                             m.id=option.id;
-                            m.update=parseInt(option.build.match(/[0-9]+/)[0])-1;
+                            m.update=parseInt(option.build.match(/[0-9]+/)[0])-2;
                             m.debug = false;
                             m.sourceMapping = option.sourceMapping;
                             editable = true;
