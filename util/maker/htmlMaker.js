@@ -94,7 +94,7 @@ htmlPacker.minify = function () {
     file(this._path).write(this._minify);
 };
 var htmlMaker = function (option) {
-    console.log("-->[html] start build html files...");
+    console.log("[brightbuilder] start build html files...");
     var files = option.source.html;
     var queue = bright.queue();
     var ps = bright.promise();
@@ -104,7 +104,7 @@ var htmlMaker = function (option) {
     for (var i in files) {
         queue.add(function (a, b) {
             var thss = this;
-            console.log("---->build html file path of " + b.path);
+            console.log("[brightbuilder] build html file path of " + b.path);
             file(b.path).read().done(function (data) {
                 var p = new htmlPacker(option, option.newPath + b.path.substring(option.basePath.length), data);
                 option.sourceMapping.html[b.packet] = p._hash;

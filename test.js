@@ -1,1 +1,1 @@
-require("./builder").build("G:\\brooder\\brightjs\\packet");
+require("./builder").build("G:/nodejs/blog/front/src/");

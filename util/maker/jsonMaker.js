@@ -13,7 +13,7 @@ jsonPacker.prototype.minify = function () {
     file(this._path).write(this._minify);
 };
 var jsonMaker = function (option) {
-    console.log("-->[json] start build json files...");
+    console.log("[brightbuilder] start build json files...");
     var files = option.source.json;
     var queue = bright.queue();
     var ps = bright.promise();
@@ -22,7 +22,7 @@ var jsonMaker = function (option) {
     });
     for (var i in files) {
         queue.add(function (a, b) {
-            console.log("---->build json file path of " + b.path);
+            console.log("[brightbuilder] build json file path of " + b.path);
             var thss = this;
             file(b.path).read().done(function (data) {
                 var p = new jsonPacker(option, option.newPath + b.path.substring(option.basePath.length), data);

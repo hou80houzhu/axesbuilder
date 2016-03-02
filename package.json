@@ -1,7 +1,7 @@
 {
   "name" : "brightbuilder",
   "description" : "build the projects which develop by the BrightJS web framework.",
-  "version" : "0.0.6",
+  "version" : "0.0.7",
   "main" : "./brightbuilder.js",
   "author" : {
     "name" : "hou80houzhu",

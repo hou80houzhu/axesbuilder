@@ -43,7 +43,7 @@ imagePacker.prototype.minify = function () {
     });
 };
 var imageMaker = function (option) {
-    console.log("-->[image] start build images files...");
+    console.log("[brightbuilder] start build images files...");
     var files = option.source.image;
     var queue = bright.queue();
     var ps = bright.promise();
@@ -53,7 +53,7 @@ var imageMaker = function (option) {
     for (var i in files) {
         queue.add(function (a, b) {
             var thss = this;
-            console.log("---->build image file path of " + b.path);
+            console.log("[brightbuilder] build image file path of " + b.path);
             file(b.path).read().done(function (data) {
                 var p = new imagePacker(option, option.newPath + b.path.substring(option.basePath.length), data);
                 p.minify();

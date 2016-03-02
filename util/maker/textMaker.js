@@ -13,7 +13,7 @@ textPacker.prototype.minify = function () {
     file(this._path).write(this._minify);
 };
 var textMaker = function (option) {
-    console.log("-->[text] start build text files...");
+    console.log("[brightbuilder] start build text files...");
     var files = option.source.text;
     var queue = bright.queue();
     var ps = bright.promise();
@@ -22,7 +22,7 @@ var textMaker = function (option) {
     });
     for (var i in files) {
         queue.add(function (a, b) {
-            console.log("---->build text file path of " + b);
+            console.log("[brightbuilder] build text file path of " + b);
             var thss = this;
             file(b.path).read().done(function (data) {
                 var p = new textPacker(option, option.newPath + b.path.substring(option.basePath.length), data);

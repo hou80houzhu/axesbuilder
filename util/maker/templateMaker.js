@@ -104,7 +104,9 @@ templatePacker.prototype.getCompressStr = function () {
     return this._info.note + this._minify + "\r\n";
 };
 var templateMaker = function (option) {
-    console.log("-->[template] start build template files...");
+    console.log("[brightbuilder] start build template files...");
+    console.log(" ");
+    console.log(" ");
     var files = option.source.template;
     var queue = bright.queue();
     var ps = bright.promise();
@@ -113,7 +115,7 @@ var templateMaker = function (option) {
     });
     for (var i in files) {
         queue.add(function (a, b) {
-            console.log("---->build template file path of " + b.path);
+            console.log("[brightbuilder] build template file path of " + b.path);
             var thss = this;
             file(b.path).read().done(function (data) {
                 var p = new templatePacker(option, b.packet, option.newPath + b.path.substring(option.basePath.length), data);

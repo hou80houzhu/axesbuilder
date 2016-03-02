@@ -1,12 +1,12 @@
 var bright = require("../bright");
 var file = require("../file");
 var pageMaker = function (option) {
-    console.log("-->[page] start change pages...");
+    console.log("[brightbuilder] start change pages...");
     var files = option.changePages;
     var queue = bright.queue();
     var ps = bright.promise();
     queue.complete(function () {
-        console.log("-->[page] change pages end");
+        console.log("[brightbuilder] change pages end");
         ps.resolve();
     });
     for (var i in files) {
@@ -51,10 +51,10 @@ var pageMaker = function (option) {
                     }
                     file(t).write(data);
                 }
-                console.log("---->change page path of " + b + (editable ? " [updated]" : " [no updated]"));
+                console.log("[brightbuilder] change page path of " + b + (editable ? " [updated]" : " [no updated]"));
                 thss.next();
             }).fail(function () {
-                console.log("---->change page path of " + b + " [fail]");
+                console.log("[brightbuilder] change page path of " + b + " [fail]");
                 thss.next();
             });
         }, null, files[i]);

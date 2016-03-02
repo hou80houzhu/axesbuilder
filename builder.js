@@ -27,7 +27,9 @@ var getConfigInfo = function (path, fn) {
             updatePage: {type: 1, backup: true, path: []}, //type=0:do nothing,type=1:edit,type=2:add file
             cssCompressWithout: [],
             codeCompressWithout: [],
-            tmpCompressWithout: []
+            tmpCompressWithout: [],
+            jsNoCompress:[],
+            cssNoCompress:[]
         };
         for (var i in info) {
             ops[i] = info[i];

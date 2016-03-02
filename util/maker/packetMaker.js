@@ -226,7 +226,7 @@ var minite = function (option, key, keyy, keyyy) {
 };
 
 var packetMaker = function (option) {
-    console.log("-->[code] start build code files...");
+    console.log("[brightbuilder] start build code files...");
     var files = option.mapping.js;
     var queue = bright.queue();
     var ps = bright.promise();
@@ -243,7 +243,7 @@ var packetMaker = function (option) {
     });
     for (var i = 0; i < files.length; i++) {
         queue.add(function (a, b) {
-            console.log("---->build code file path of " + b);
+            console.log("[brightbuilder] build code file path of " + b);
             var thss = this;
             file(b).read().done(function (data) {
                 var p = new packetPacker(option, b, data);
@@ -254,6 +254,8 @@ var packetMaker = function (option) {
                         option.codeCompress += p.code;
                     }
                     option.source.code[p._packetInfo.packet] = p._packetInfo.path;
+                }else{
+                    console.log("[brightbuilder] build code file path of " + b+" not a packet passed");
                 }
                 for (var i in option.source) {
                     var n = p._packetInfo[i];

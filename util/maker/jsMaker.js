@@ -9,15 +9,27 @@ var jsPacker = function (info, path, content) {
     this._content = content;
 };
 jsPacker.prototype.minify = function () {
-    this._minify = uglify.minify(this._content, {
-        fromString: true,
-        mangle: true
-    }).code;
+    var go = true;
+    for (var i in this._base.jsNoCompress) {
+        var a = this._base.jsNoCompress[i];
+        if (this._path.indexOf(a) !== -1) {
+            go = false;
+        }
+    }
+    if (go) {
+        this._minify = uglify.minify(this._content, {
+            fromString: true,
+            mangle: true
+        }).code;
+    } else {
+        this._minify = this._content;
+        console.log("[brightbuilder] file " + this._path + " passed");
+    }
     this._hash = hash.md5(this._minify);
     file(this._path).write(this._minify);
 };
 var jsMaker = function (option) {
-    console.log("-->[js] start build js files...");
+    console.log("[brightbuilder] start build js files...");
     var files = option.source.js;
     var queue = bright.queue();
     var ps = bright.promise();
@@ -26,7 +38,7 @@ var jsMaker = function (option) {
     });
     for (var i in files) {
         queue.add(function (a, b) {
-            console.log("---->build js file path of " + b.path);
+            console.log("[brightbuilder] build js file path of " + b.path);
             var thss = this;
             file(b.path).read().done(function (data) {
                 var p = new jsPacker(option, option.newPath + b.path.substring(option.basePath.length), data);

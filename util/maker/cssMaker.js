@@ -84,11 +84,23 @@ cssPacker.writeResource = function () {
     });
 };
 cssPacker.prototype.minify = function () {
-    var a = uglifycss.processString(this.content, {
-        uglyComments: true,
-        cuteComments: true
-    });
-    this._minify = a;
+    var go = true;
+    for (var i in this._base.cssNoCompress) {
+        var a = this._base.cssNoCompress[i];
+        if (this._path.indexOf(a) !== -1) {
+            go = false;
+        }
+    }
+    if (go) {
+        var a = uglifycss.processString(this.content, {
+            uglyComments: true,
+            cuteComments: true
+        });
+        this._minify = a;
+    } else {
+        this._minify = this.content;
+        console.log("[brightbuilder] file " + this._path + " passed");
+    }
     cssPacker.writeResource.call(this);
     this._hash = hash.md5(this._minify);
     file(this._path).write(this._minify);
@@ -100,7 +112,7 @@ cssPacker.prototype.getCompressStr = function () {
     return this._info.note + this._minify + "\r\n";
 };
 var cssMaker = function (option, iscompress) {
-    console.log("-->[css] start build css files...");
+    console.log("[brightbuilder] start build css files...");
     var files = option.source.css;
     if (!iscompress) {
         files = option.source.ocss;
@@ -112,7 +124,7 @@ var cssMaker = function (option, iscompress) {
     });
     for (var i in files) {
         queue.add(function (a, b) {
-            console.log("---->building css file path of " + b.path);
+            console.log("[brightbuilder] building css file path of " + b.path);
             var thss = this;
             file(b.path).read().done(function (data) {
                 var p = new cssPacker(option, b.packet, option.newPath + b.path.substring(option.basePath.length), data);

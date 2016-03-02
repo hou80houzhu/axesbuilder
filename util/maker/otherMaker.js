@@ -43,7 +43,7 @@ otherPacker.prototype.minify = function () {
     });
 };
 var otherMaker = function (option) {
-    console.log("-->[other] start build other files...");
+    console.log("[brightbuilder] start build other files...");
     var queue = bright.queue();
     var files = option.source.other;
     var ps = bright.promise();
@@ -53,7 +53,7 @@ var otherMaker = function (option) {
     for (var i in files) {
         queue.add(function (a, b) {
             var thss = this;
-            console.log("---->build other file path of " + b.path);
+            console.log("[brightbuilder] build other file path of " + b.path);
             file(b.path).read().done(function (data) {
                 var p = new otherPacker(option, option.newPath + b.path.substring(option.basePath.length), data);
                 p.minify();
