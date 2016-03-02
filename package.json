@@ -8,9 +8,6 @@
     "email" : "hou80houzhu@vip.qq.com"
   },
   "keywords" : ["brightjs","bright","build"],
-  "licenses" : {
-    "type" : "none"
-  },
   "bin": { "brightbuilder": "bin/brightbuilder.js" },
   "repository" : {
     "type" : "git",
