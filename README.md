@@ -4,11 +4,11 @@
 
 build the projects which run with the BrightJS web framework.
 
-##What is BrightBuilder
+## What is BrightBuilder
 
 BrightBuilder for building frontend program for frontend resources combined compression and version tracking
 
-##How to use
+## How to use
 
 **Step 1:**  install BrightBuilder
 
@@ -24,21 +24,21 @@ run the command to build
 
 `brightbuilder build projectpacketpath`
 
-##build.json
+## build.json
 
-###id
+### id
 
 Construction of the project id to distinguish from each other, sometimes a project might construct multiple releases and updates distinction, it will be very important at this time id
 
-###build
+### build
 
 The project build number, users do not need attention, it is automatically incremented
 
-###pathPrefix
+### pathPrefix
 
 May need before the packet is added to build the project basePath prefix (used in a specific user resolves dynamic pages)
 
-###updatePage
+### updatePage
 
 After the build to edit pages
 
@@ -53,15 +53,15 @@ After the build to edit pages
 
 > Relative to the directory is the directory packet
 
-###cssCompressWithout
+### cssCompressWithout
 
 Not to merge css package Name
 
-###codeCompressWithout
+### codeCompressWithout
 
 Not to merge js package Name
 
-###tmpCompressWithout
+### tmpCompressWithout
 
 Not to merge template package Name
 
