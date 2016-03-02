@@ -81,8 +81,10 @@ Not to merge template package Name
          "../*.*"
       ]
    },
-   "cssCompressWithout": [],
-   "codeCompressWithout": [],
-   "tmpCompressWithout": []
+   "cssCompressWithout": [],//no compress and no merge.packet names
+   "codeCompressWithout": [],//no compress and no merge.packet names
+   "tmpCompressWithout": [],//no compress and no merge.packet names
+   "jsNoCompress": [],//no compress.folder name
+   "cssNoCompress": []//no compress.folder name
 }
 ```
