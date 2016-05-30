@@ -1,8 +1,8 @@
 {
   "name" : "brightbuilder",
   "description" : "build the projects which develop by the BrightJS web framework.",
-  "version" : "0.0.10",
-  "main" : "./brightbuilder.js",
+  "version" : "0.0.11",
+  "main" : "./builder.js",
   "author" : {
     "name" : "hou80houzhu",
     "email" : "hou80houzhu@vip.qq.com"
